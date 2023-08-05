@@ -1,3 +1,76 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+  body,
+  html,
+  body > div, /* Phoenix LiveView container */
+  .app-container {
+    height: 100%;
+    margin: 0;
+    @apply text-center;
+  }
+
+  input,
+  button,
+  select,
+  option {
+    @apply outline-none;
+  }
+
+  .safe-notch {
+    @apply safe-top safe-left safe-right safe-bottom;
+  }
+}
+
+@layer components {
+  .app-container {
+    @apply safe-notch bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100 flex flex-col select-none;
+  }
+
+  /* input, button {
+    @apply border border-slate-300 shadow-sm rounded-md py-2 px-4 m-1;
+  }
+
+  button {
+    @apply !bg-blue-300 text-blue-950 hover:!bg-blue-400;
+  }  */
+
+  .btn-round {
+    @apply bg-white text-brand-dark text-center font-bold rounded-full w-full py-3 px-6 my-5 hover:opacity-90 active:outline-none active:ring-2 active:ring-offset-2 active:ring-white;
+  }
+
+  .list {
+    @apply overflow-hidden bg-white dark:bg-slate-800 shadow divide-y divide-slate-200 dark:divide-slate-700;
+  }
+
+  .list li {
+    @apply px-4 py-4 sm:px-6;
+  }
+}
+
+@layer utilities {
+  .gradient-full-page {
+    background: hsla(206, 76%, 21%, 1);
+    background-attachment: fixed;
+
+    background: linear-gradient(
+      60deg,
+      hsla(206, 76%, 21%, 1) 0%,
+      hsla(186, 46%, 49%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      60deg,
+      hsla(206, 76%, 21%, 1) 0%,
+      hsla(186, 46%, 49%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      60deg,
+      hsla(206, 76%, 21%, 1) 0%,
+      hsla(186, 46%, 49%, 1) 100%
+    );
+  }
+}

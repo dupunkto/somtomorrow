@@ -18,5 +18,14 @@ defmodule SomtomorrowWeb.Router do
 
   scope "/", SomtomorrowWeb do
     pipe_through :browser
+
+    live "/", WelcomeLive, :welcome
+    live "/page/schedule", ScheduleLive, :schedule
+    live "/page/homework", HomeworkLive, :homework
+    live "/page/grades", GradesLive, :grades
+    live "/page/profile", ProfileLive, :profile
+
+    # catch-all route
+    live "/page/:id", WhoopsLive, :whoops
   end
 end

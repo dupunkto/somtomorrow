@@ -64,6 +64,16 @@ defmodule SomtomorrowWeb do
     end
   end
 
+  def live_hook do
+    quote do
+      use Phoenix.Component
+
+      import Phoenix.LiveView
+
+      unquote(html_helpers())
+    end
+  end
+
   def html do
     quote do
       use Phoenix.Component
@@ -79,6 +89,7 @@ defmodule SomtomorrowWeb do
     quote do
       import Phoenix.HTML
       import SomtomorrowWeb.CoreComponents
+      import SomtomorrowWeb.CustomComponents
 
       alias Phoenix.LiveView.JS
 
