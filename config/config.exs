@@ -8,16 +8,16 @@
 import Config
 
 config :somtomorrow,
-  namespace: SomTomorrow
+  namespace: Somtomorrow
 
 # Configures the endpoint
-config :somtomorrow, SomTomorrowWeb.Endpoint,
+config :somtomorrow, SomtomorrowWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: SomTomorrowWeb.ErrorHTML, json: SomTomorrowWeb.ErrorJSON],
+    formats: [html: SomtomorrowWeb.ErrorHTML, json: SomtomorrowWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: SomTomorrow.PubSub,
+  pubsub_server: Somtomorrow.PubSub,
   live_view: [signing_salt: "gJcU3TqL"]
 
 # Configure esbuild (the version is required)

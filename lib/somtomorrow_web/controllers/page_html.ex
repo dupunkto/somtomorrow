@@ -1,5 +1,5 @@
-defmodule SomTomorrowWeb.PageHTML do
-  use SomTomorrowWeb, :html
+defmodule SomtomorrowWeb.PageHTML do
+  use SomtomorrowWeb, :html
 
   embed_templates "page_html/*"
 end

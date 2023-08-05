@@ -1,12 +1,12 @@
-defmodule SomTomorrowWeb.ErrorJSONTest do
-  use SomTomorrowWeb.ConnCase, async: true
+defmodule SomtomorrowWeb.ErrorJSONTest do
+  use SomtomorrowWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert SomTomorrowWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert SomtomorrowWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
   end
 
   test "renders 500" do
-    assert SomTomorrowWeb.ErrorJSON.render("500.json", %{}) ==
+    assert SomtomorrowWeb.ErrorJSON.render("500.json", %{}) ==
              %{errors: %{detail: "Internal Server Error"}}
   end
 end

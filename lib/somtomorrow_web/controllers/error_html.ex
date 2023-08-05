@@ -1,5 +1,5 @@
-defmodule SomTomorrowWeb.ErrorHTML do
-  use SomTomorrowWeb, :html
+defmodule SomtomorrowWeb.ErrorHTML do
+  use SomtomorrowWeb, :html
 
   # If you want to customize your error pages,
   # uncomment the embed_templates/1 call below

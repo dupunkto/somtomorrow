@@ -1,12 +1,12 @@
-defmodule SomTomorrowWeb do
+defmodule SomtomorrowWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use SomTomorrowWeb, :controller
-      use SomTomorrowWeb, :html
+      use SomtomorrowWeb, :controller
+      use SomtomorrowWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,7 +40,7 @@ defmodule SomTomorrowWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: SomTomorrowWeb.Layouts]
+        layouts: [html: SomtomorrowWeb.Layouts]
 
       import Plug.Conn
 
@@ -51,7 +51,7 @@ defmodule SomTomorrowWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {SomTomorrowWeb.Layouts, :app}
+        layout: {SomtomorrowWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -83,7 +83,7 @@ defmodule SomTomorrowWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import SomTomorrowWeb.CoreComponents
+      import SomtomorrowWeb.CoreComponents
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -96,9 +96,9 @@ defmodule SomTomorrowWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: SomTomorrowWeb.Endpoint,
-        router: SomTomorrowWeb.Router,
-        statics: SomTomorrowWeb.static_paths()
+        endpoint: SomtomorrowWeb.Endpoint,
+        router: SomtomorrowWeb.Router,
+        statics: SomtomorrowWeb.static_paths()
     end
   end
 

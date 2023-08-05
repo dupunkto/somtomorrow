@@ -1,11 +1,11 @@
-defmodule SomTomorrowWeb.Router do
-  use SomTomorrowWeb, :router
+defmodule SomtomorrowWeb.Router do
+  use SomtomorrowWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {SomTomorrowWeb.Layouts, :root}
+    plug :put_root_layout, html: {SomtomorrowWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,14 +14,14 @@ defmodule SomTomorrowWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", SomTomorrowWeb do
+  scope "/", SomtomorrowWeb do
     pipe_through :browser
 
     get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", SomTomorrowWeb do
+  # scope "/api", SomtomorrowWeb do
   #   pipe_through :api
   # end
 end

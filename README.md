@@ -1,4 +1,4 @@
-# SomTomorrow
+# Somtomorrow
 
 To start your Phoenix server:
 

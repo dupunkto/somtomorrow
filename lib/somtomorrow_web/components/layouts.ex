@@ -1,5 +1,5 @@
-defmodule SomTomorrowWeb.Layouts do
-  use SomTomorrowWeb, :html
+defmodule SomtomorrowWeb.Layouts do
+  use SomtomorrowWeb, :html
 
   embed_templates "layouts/*"
 end

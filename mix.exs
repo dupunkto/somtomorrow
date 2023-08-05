@@ -1,4 +1,4 @@
-defmodule SomTomorrow.MixProject do
+defmodule Somtomorrow.MixProject do
   use Mix.Project
 
   def project do
@@ -18,7 +18,7 @@ defmodule SomTomorrow.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {SomTomorrow.Application, []},
+      mod: {Somtomorrow.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

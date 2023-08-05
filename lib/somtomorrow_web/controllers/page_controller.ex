@@ -1,5 +1,5 @@
-defmodule SomTomorrowWeb.PageController do
-  use SomTomorrowWeb, :controller
+defmodule SomtomorrowWeb.PageController do
+  use SomtomorrowWeb, :controller
 
   def home(conn, _params) do
     # The home page is often custom made,

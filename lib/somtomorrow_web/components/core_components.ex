@@ -1,4 +1,4 @@
-defmodule SomTomorrowWeb.CoreComponents do
+defmodule SomtomorrowWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -642,9 +642,9 @@ defmodule SomTomorrowWeb.CoreComponents do
     # uncommenting and adjusting the following code:
 
     # if count = opts[:count] do
-    #   Gettext.dngettext(SomTomorrowWeb.Gettext, "errors", msg, msg, count, opts)
+    #   Gettext.dngettext(SomtomorrowWeb.Gettext, "errors", msg, msg, count, opts)
     # else
-    #   Gettext.dgettext(SomTomorrowWeb.Gettext, "errors", msg, opts)
+    #   Gettext.dgettext(SomtomorrowWeb.Gettext, "errors", msg, opts)
     # end
 
     Enum.reduce(opts, msg, fn {key, value}, acc ->

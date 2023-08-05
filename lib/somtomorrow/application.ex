@@ -1,4 +1,4 @@
-defmodule SomTomorrow.Application do
+defmodule Somtomorrow.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,18 +9,18 @@ defmodule SomTomorrow.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      SomTomorrowWeb.Telemetry,
+      SomtomorrowWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: SomTomorrow.PubSub},
+      {Phoenix.PubSub, name: Somtomorrow.PubSub},
       # Start the Endpoint (http/https)
-      SomTomorrowWeb.Endpoint
-      # Start a worker by calling: SomTomorrow.Worker.start_link(arg)
-      # {SomTomorrow.Worker, arg}
+      SomtomorrowWeb.Endpoint
+      # Start a worker by calling: Somtomorrow.Worker.start_link(arg)
+      # {Somtomorrow.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: SomTomorrow.Supervisor]
+    opts = [strategy: :one_for_one, name: Somtomorrow.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -28,7 +28,7 @@ defmodule SomTomorrow.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    SomTomorrowWeb.Endpoint.config_change(changed, removed)
+    SomtomorrowWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

@@ -1,4 +1,4 @@
-defmodule SomTomorrowWeb.Endpoint do
+defmodule SomtomorrowWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :somtomorrow
 
   # The session will be stored in the cookie and signed,
@@ -21,7 +21,7 @@ defmodule SomTomorrowWeb.Endpoint do
     at: "/",
     from: :somtomorrow,
     gzip: false,
-    only: SomTomorrowWeb.static_paths()
+    only: SomtomorrowWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -42,5 +42,5 @@ defmodule SomTomorrowWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug SomTomorrowWeb.Router
+  plug SomtomorrowWeb.Router
 end
