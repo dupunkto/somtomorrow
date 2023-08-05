@@ -35,3 +35,5 @@ somtomorrow-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# NixOS
+.direnv
