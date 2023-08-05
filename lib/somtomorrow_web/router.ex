@@ -1,4 +1,6 @@
 defmodule SomtomorrowWeb.Router do
+  @moduledoc false
+
   use SomtomorrowWeb, :router
 
   pipeline :browser do
@@ -16,12 +18,5 @@ defmodule SomtomorrowWeb.Router do
 
   scope "/", SomtomorrowWeb do
     pipe_through :browser
-
-    get "/", PageController, :home
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", SomtomorrowWeb do
-  #   pipe_through :api
-  # end
 end

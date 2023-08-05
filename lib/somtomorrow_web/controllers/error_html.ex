@@ -1,4 +1,6 @@
 defmodule SomtomorrowWeb.ErrorHTML do
+  @moduledoc false
+
   use SomtomorrowWeb, :html
 
   # If you want to customize your error pages,

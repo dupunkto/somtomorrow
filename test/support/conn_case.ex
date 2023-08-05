@@ -20,14 +20,15 @@ defmodule SomtomorrowWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint SomtomorrowWeb.Endpoint
-
       use SomtomorrowWeb, :verified_routes
+
+      import Phoenix.ConnTest
 
       # Import conveniences for testing with connections
       import Plug.Conn
-      import Phoenix.ConnTest
       import SomtomorrowWeb.ConnCase
+
+      @endpoint SomtomorrowWeb.Endpoint
     end
   end
 
