@@ -38,22 +38,22 @@ defmodule SomtomorrowWeb.Tabs do
       %Tab{
         id: :schedule,
         title: "Rooster",
-        icon: "calendar"
+        icon: "calendar" # hero-calendar hero-calendar-solid
       },
       %Tab{
         id: :homework,
         title: "Huiswerk",
-        icon: "pencil"
+        icon: "pencil" # hero-pencil hero-pencil-solid
       },
       %Tab{
         id: :grades,
         title: "Cijfers",
-        icon: "academic-cap"
+        icon: "academic-cap" # hero-academic-cap hero-academic-cap-solid
       },
       %Tab{
         id: :profile,
         title: "Profiel",
-        icon: "user-circle"
+        icon: "user-circle" # hero-user-circle hero-user-circle-solid
       }
     ]
   end
