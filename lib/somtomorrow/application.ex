@@ -6,6 +6,7 @@ defmodule Somtomorrow.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      Somtomorrow.Server,
       SomtomorrowWeb.Telemetry,
       {Phoenix.PubSub, name: Somtomorrow.PubSub},
       SomtomorrowWeb.Endpoint
