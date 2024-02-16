@@ -38,28 +38,32 @@ defmodule SomtomorrowWeb.Tabs do
       %Tab{
         id: :schedule,
         title: "Rooster",
-        icon: "calendar" # hero-calendar hero-calendar-solid
+        # hero-calendar hero-calendar-solid
+        icon: "calendar"
       },
       %Tab{
         id: :homework,
         title: "Huiswerk",
-        icon: "pencil" # hero-pencil hero-pencil-solid
+        # hero-pencil hero-pencil-solid
+        icon: "pencil"
       },
       %Tab{
         id: :grades,
         title: "Cijfers",
-        icon: "academic-cap" # hero-academic-cap hero-academic-cap-solid
+        # hero-academic-cap hero-academic-cap-solid
+        icon: "academic-cap"
       },
       %Tab{
         id: :profile,
         title: "Profiel",
-        icon: "user-circle" # hero-user-circle hero-user-circle-solid
+        # hero-user-circle hero-user-circle-solid
+        icon: "user-circle"
       }
     ]
   end
 
   defp get_tab(tab_id) do
-    [tab] = Enum.filter(tabs(), & &1.id == tab_id)
+    [tab] = Enum.filter(tabs(), &(&1.id == tab_id))
     tab
   end
 end

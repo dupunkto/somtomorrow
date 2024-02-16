@@ -3,9 +3,9 @@ defmodule Somtomorrow do
   Next-gen cross-platform Somtoday app with advanced features and modern design.
   """
 
-  alias Somtomorrow.User
   alias Somtomorrow.Credentials
   alias Somtomorrow.Subject
+  alias Somtomorrow.User
 
   @base "https://api.somtoday.nl/rest/v1"
 
@@ -16,8 +16,7 @@ defmodule Somtomorrow do
     end
   end
 
-  defp fetch_credentials(username, password)
-  when is_binary(username) and is_binary(password) do
+  defp fetch_credentials(username, password) when is_binary(username) and is_binary(password) do
     # Hard code credentials for now. Later we will call a other server
     # that will obtain them by logging in via the JS puppeteer system.
     {:ok, %Credentials{access_token: "", refresh_token: ""}}
@@ -25,7 +24,12 @@ defmodule Somtomorrow do
 
   @spec subjects(User.t()) :: [Subject.t()]
   def subjects(%User{credentials: credentials}) do
-    http_request(credentials, "#{@base}/vakken")
+    credentials |> http_request("#{@base}/vakken") |> Subject.from()
+  end
+
+  @spec years(User.t()) :: [Subject.t()]
+  def years(%User{credentials: credentials}) do
+    credentials |> http_request("#{@base}/schooljaren") |> Year.from()
   end
 
   defp http_request(%Credentials{access_token: access_token}, endpoint) do

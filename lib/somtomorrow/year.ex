@@ -1,6 +1,6 @@
-defmodule Somtomorrow.Subject do
+defmodule Somtomorrow.Year do
   @moduledoc """
-  A subject.
+  A school year.
   """
 
   use TypedStruct
@@ -8,7 +8,9 @@ defmodule Somtomorrow.Subject do
   typedstruct do
     field :id, integer()
     field :name, String.t()
-    field :acronym, String.t()
+    field :current?, boolean()
+    field :from, DateTime.t()
+    field :to, DateTime.t()
   end
 
   @spec from(map()) :: [t()]
@@ -18,8 +20,8 @@ defmodule Somtomorrow.Subject do
 
   @spec from(map()) :: t()
   def from(json) do
-    %{"naam" => name, "afkorting" => acronym} = json
+    %{"naam" => name, "isHuidig" => current?, "vanafDatum" => from, "totDatum" => to} = json
     id = json |> Enum.get("links", []) |> hd() |> Enum.get("id")
-    %__MODULE__{id: id, name: name, acronym: acronym}
+    %__MODULE__{id: id, name: name, current?: current?, from: Date.from_iso8601!(from), to: Date.from_iso8601!(to)}
   end
 end

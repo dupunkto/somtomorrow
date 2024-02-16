@@ -1,0 +1,10 @@
+#!/usr/bin/bash -eux
+
+serve() {
+  mix phx.server
+}
+
+setup () {
+  mix deps.get
+}
+
